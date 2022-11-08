@@ -5,15 +5,14 @@ class Student:
         self.name = name
         self.grade = grade
     
-    def result (self, name, grade):
-        if grade > 5:
-            print("El alumno {} ha aprobado con una nota de {}".format(name, grade))
+    def result (self):
+        if self.grade > 5:
+            print("El alumno {} ha aprobado con una nota de {}".format(self.name, self.grade))
         else:
-            print("El alumno {} ha suspendido con una nota de {}".format(name, grade))
+            print("El alumno {} ha suspendido con una nota de {}".format(self.name, self.grade))
             
-cristian = Student("Cristian", 7)
-alv = Student("Alv", 3)
-print(cristian.name)
-print(cristian.grade)
-cristian.result(cristian.name, cristian.grade)
-alv.result(alv.name, alv.grade)
+alumno1 = Student("Cristian", 7)
+alumno2 = Student("Alv", 3)
+
+alumno1.result()
+alumno2.result()
